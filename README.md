@@ -21,7 +21,7 @@
 1. Follow steps 1 and 2 from the previous section.
 2. Install PyInstaller by running `python pip install pyinstaller` or `python3 -m pip install pyinstaller` if you're on Linux.
 3. Run `python pyinstaller --noconsole --onefile --icon=icon.ico main.py` or `python3 pyinstaller --noconsole --onefile --icon=icon.ico main.py` if you're on Linux. (Replace <b> icon.ico </b> with your own icon)
-
+4. Move `config.json` and the .bmp files to the directory.
 ## Features
 * Automatically loads the last used RPC.
 
