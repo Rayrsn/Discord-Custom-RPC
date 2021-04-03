@@ -9,8 +9,8 @@
 
 ### <h2 align="center"> <i> <b> A Discord Custom RPC app with GUI </b> </i> </h2>
 
-<br>
-<hr>
+
+
 <br>
 
 # How To Use
