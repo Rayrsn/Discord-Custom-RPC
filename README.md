@@ -10,7 +10,7 @@
 <br>
 
 ## How To Use
-1. Just head to the [Releases](https://github.com/Rayrsn/Discord-Custom-RPC/releases) tab and download the latest version.
+<b> Just head to the [Releases](https://github.com/Rayrsn/Discord-Custom-RPC/releases) tab and download the latest version. </b>
 
 
 ## Running from source 
