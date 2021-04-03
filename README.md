@@ -24,7 +24,8 @@
 4. Move `config.json` and the .bmp files to the directory.
 ## Features
 * Automatically loads the last used RPC.
-
+## Known Bugs
+* The RPC doesn't get updated on your local client but it does get updated. (you can check with other devices)
 
 ## To-Do List
 - [ ] Add presets
