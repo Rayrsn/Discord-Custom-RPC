@@ -1,8 +1,8 @@
-# Discord-Custom-RPC
+<div align=”center”> # Discord-Custom-RPC
 
 
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Rayrsn/Discord-Custom-RPC?style=for-the-badge)
-
+</div>
 ### <h2 align="center"> <i> <b> A Discord Custom RPC app with GUI </b> </i> </h2>
 
 <br>
