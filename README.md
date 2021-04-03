@@ -3,10 +3,8 @@
 
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Rayrsn/Discord-Custom-RPC?style=for-the-badge)
 
-<img src="https://rayr.ml/Github/rpclogo.png" align="center">
-
 <p align="center">
-  <img width="460" height="300" src="https://rayr.ml/Github/rpclogo.png">
+  <img width="512" height="512" src="https://rayr.ml/Github/rpclogo.png">
 </p>
 
 ### <h2 align="center"> <i> <b> A Discord Custom RPC app with GUI </b> </i> </h2>
