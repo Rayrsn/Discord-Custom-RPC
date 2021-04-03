@@ -9,8 +9,8 @@
 <hr>
 <br>
 
-## How To Use
-<b> Just head to the [Releases](https://github.com/Rayrsn/Discord-Custom-RPC/releases) tab and download the latest version. </b>
+# How To Use
+## <b> Just head to the [Releases](https://github.com/Rayrsn/Discord-Custom-RPC/releases) tab and download the latest version. </b>
 
 
 ## Running from source 
