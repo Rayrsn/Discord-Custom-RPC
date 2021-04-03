@@ -5,6 +5,10 @@
 
 <img src="https://rayr.ml/Github/rpclogo.png" align="center">
 
+<p align="center">
+  <img width="460" height="300" src="https://rayr.ml/Github/rpclogo.png">
+</p>
+
 ### <h2 align="center"> <i> <b> A Discord Custom RPC app with GUI </b> </i> </h2>
 
 <br>
