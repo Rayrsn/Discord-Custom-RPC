@@ -32,4 +32,5 @@
 * Sometimes the RPC doesn't get updated on your local client but it does get updated. (you can check with other devices)
 
 ## To-Do List
+- [ ] Minimize to tray feature
 - [ ] Add presets
