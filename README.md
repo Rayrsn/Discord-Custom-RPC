@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <img width="512" height="512" src="https://rayr.ml/Github/rpclogo.png">
+  <img width="512" height="512" src="https://github.com/Rayrsn/Discord-Custom-RPC/raw/main/images/rpclogo.png?raw=true">
 </p>
 
 ### <h2 align="center"> <i> <b> A Discord Custom RPC app with GUI </b> </i> </h2>
@@ -17,8 +17,9 @@
 
 <br>
 
-# Preview
-![Preview Win.png](https://github.com/Rayrsn/Discord-Custom-RPC/raw/main/images/preview_win.png?raw=true)
+<p>
+  <img width=70% height=70% src="https://github.com/Rayrsn/Discord-Custom-RPC/raw/main/images/preview_win.png?raw=true">
+</p>
 
 # Usage
 ### <b> Just head to the [Releases](https://github.com/Rayrsn/Discord-Custom-RPC/releases) tab and download the latest version. </b>
