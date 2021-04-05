@@ -17,6 +17,9 @@
 
 <br>
 
+# Preview
+![Preview Win.png](https://github.com/Rayrsn/Discord-Custom-RPC/raw/main/images/preview_win.png?raw=true)
+
 # Usage
 ### <b> Just head to the [Releases](https://github.com/Rayrsn/Discord-Custom-RPC/releases) tab and download the latest version. </b>
 ## How do i get the client id and the other stuff
