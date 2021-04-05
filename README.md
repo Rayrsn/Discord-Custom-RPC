@@ -21,7 +21,7 @@
 
 # Usage
 ### <b> Just head to the [Releases](https://github.com/Rayrsn/Discord-Custom-RPC/releases) tab and download the latest version. </b>
-## How do i get the client id and the other stuff
+## How do i get the client id and the other stuff?
 1. Go to [Discord's Developer Portal](https://discord.com/developers/applications/).
 2. Make a New Application and name it whatever you want. (this is also the name of your RPC)
 
