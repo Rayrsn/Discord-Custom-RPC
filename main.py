@@ -28,9 +28,6 @@ button_label2=config['Main']['button_label2']
 button_url2=config['Main']['button_url2']
 
 #####################
-global rpcconnect
-rpcconnect=False
-start_time=time.time()
 cd = dir_path = os.path.dirname(os.path.realpath(__file__))
 # begin wxGlade: dependencies
 # end wxGlade
@@ -318,9 +315,8 @@ class frameclass(wx.Frame):
     
     
     def updatefunc(self, evt):
-        global rpcconnect
         global RPC
-
+        RPC.clear()
 
         client_id_ent = (str(self.text_ctrl_1.GetValue()))
         details = (str(self.text_ctrl_2.GetValue()))
@@ -337,7 +333,9 @@ class frameclass(wx.Frame):
 
         print(client_id)
 
-        if rpcconnect==False:
+        enabletime = self.checkbox_2.GetValue()
+
+        if enabletime==True:
                 kwargs={}
                 if details!="":
                     kwargs['details']=details
@@ -359,8 +357,10 @@ class frameclass(wx.Frame):
                 if button_label2!="" and button_url2!="":
                     secondbutton={'label':str(button_label2),'url':str(button_url2)}
                     kwargs["buttons"].append(secondbutton)
+                
+                start_time=time.time()
                 kwargs['start']=int(start_time)
-        elif rpcconnect==True:
+        elif enabletime==False:
                 kwargs={}
                 if details!="":
                     kwargs['details']=details
@@ -381,21 +381,18 @@ class frameclass(wx.Frame):
                     kwargs["buttons"].append(firstbutton)
                 if button_label2!="" and button_url2!="":
                     secondbutton={'label':str(button_label2),'url':str(button_url2)}
-                    kwargs["buttons"].append(secondbutton)
-                kwargs['start']=int(start_time)                
+                    kwargs["buttons"].append(secondbutton)                
         
         RPC = Presence(client_id=client_id)
-        print('rpc closed')
         RPC.connect()
         print('rpc connected')
-        rpcconnect=True
         try:
             config['Main']['client_id']=client_id
             config['Main']['state']=state
             config['Main']['details']=details
-            config['Main']['large_image']=large_image
+            config['Main']['large_image']=large_image_name
             config['Main']['large_text']=large_text
-            config['Main']['small_image']=small_image
+            config['Main']['small_image']=small_image_name
             config['Main']['small_text']=small_text
             config['Main']['button_label1']=button_label1
             config['Main']['button_url1']=button_url1
@@ -403,8 +400,9 @@ class frameclass(wx.Frame):
             config['Main']['button_url2']=button_url2
             with open("config.json","w") as new_config:
                 json.dump(config,new_config)
+            RPC.clear()
+            print('rpc closed')
             RPC.update(**kwargs)
-            rpcconnect=True
         except pypresence.exceptions.InvalidID:
             wx.MessageBox("Invalid Client ID", "Warning" ,wx.OK | wx.ICON_INFORMATION)
         
@@ -465,4 +463,3 @@ class appclass(wx.App):
 if __name__ == "__main__":
     app = appclass(0)
     app.MainLoop()
-    
