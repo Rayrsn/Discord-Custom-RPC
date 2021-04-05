@@ -30,7 +30,8 @@
 * Automatically loads the last used RPC.
 ## Known Bugs
 * Sometimes the RPC doesn't get updated on your local client but it does get updated. (you can check with other devices)
-
+* The enable time check box doesn't work
 ## To-Do List
 - [ ] Minimize to tray feature
+- [ ] Make a functioning enable time check box
 - [ ] Add presets
