@@ -49,9 +49,10 @@ Also remember you can't rename the image once you hit the "Save Changes" button.
 ## Features
 * Automatically loads the last used RPC.
 ## Known Bugs
-* Sometimes the RPC doesn't get updated on your local client but it does get updated. (you can check with other devices)
-* The enable time check box doesn't work
+* ~~Sometimes the RPC doesn't get updated on your local client but it does get updated. (you can check with other devices)~~
+* ~~The enable time check box doesn't work.~~
+* All of the mentioned bugs are fixed.
 ## To-Do List
-- [x] Make a functioning enable time check box
-- [ ] Minimize to tray feature 
-- [ ] Add presets
+- [x] Make a functioning enable time check box.
+- [ ] Minimize to tray feature.
+- [ ] Add presets.
