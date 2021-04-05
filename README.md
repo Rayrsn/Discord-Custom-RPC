@@ -30,7 +30,10 @@
 ![RichPresence](https://github.com/Rayrsn/Discord-Custom-RPC/raw/main/images/richpresence.png?raw=true)
 
 4. Here you can upload any image you want. (it has to be 512x512, there are many online tools that resize images for you)
-5. Also remember you can't rename the image once you hit the "Save Changes" button. (it has to be deleted and reuploaded)
+Also remember you can't rename the image once you hit the "Save Changes" button. (it has to be deleted and reuploaded)
+5. Then head back to "General Information" tab and copy the Application ID. (this is the same as Client ID)
+
+![AppID](https://github.com/Rayrsn/Discord-Custom-RPC/raw/main/images/appid.png?raw=true)
 
 ## Running from source 
 1. Make sure you have Python 3 installed.
