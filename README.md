@@ -2,8 +2,6 @@
 
 <p align="center">
 	<img src="https://img.shields.io/github/v/release/Rayrsn/Discord-Custom-RPC?style=for-the-badge" />
-</p>
-<p align="center" href="https://github.com/qwertyquerty/pypresence">
 	<img src="https://img.shields.io/badge/using-pypresence-00bb88.svg?style=for-the-badge&logo=discord&logoWidth=20" />
 </p>
 
