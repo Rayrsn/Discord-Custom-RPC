@@ -54,5 +54,5 @@ Also remember you can't rename the image once you hit the "Save Changes" button.
 * All of the mentioned bugs are fixed.
 ## To-Do List
 - [x] Make a functioning enable time check box.
-- [ ] Minimize to tray feature.
+- [x] Minimize to tray feature.
 - [ ] Add presets.
