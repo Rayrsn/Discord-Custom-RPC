@@ -40,14 +40,7 @@ cd = dir_path = os.path.dirname(os.path.realpath(__file__))
 # end wxGlade
 
 #########################
-"""large_image = "icon"
-large_text = "test"
-state = "test"
-Button_label1 = "test"
-Button_URL1 = "https://www.google.com/"
-Button_label2 = "test"
-Button_URL2 = "https://www.google.com/"
-"""
+
 client_id_App = "827873727396053002"
 RPC = Presence(client_id=client_id_App)
 RPC.connect()
@@ -60,7 +53,7 @@ class DemoTaskBarIcon(TaskBarIcon):
     TBMENU_REMOVE  = wx.NewIdRef()
     
     def __init__(self, frame):
-        TaskBarIcon.__init__(self, wx.adv.TBI_DOCK) # wx.adv.TBI_CUSTOM_STATUSITEM
+        TaskBarIcon.__init__(self, wx.adv.TBI_DOCK) 
         self.frame = frame
 
         # Set the image
@@ -68,7 +61,7 @@ class DemoTaskBarIcon(TaskBarIcon):
         bmp = wx.Bitmap(img)
         self.icon = Icon(bmp)
         self.icon.CopyFromBitmap(bmp)
-        self.SetIcon(self.icon, "wxPython Demo")
+        self.SetIcon(self.icon, "Discord Custom RPC")
         self.imgidx = 1
 
         # bind some events
@@ -80,12 +73,6 @@ class DemoTaskBarIcon(TaskBarIcon):
 
 
     def CreatePopupMenu(self):
-        """
-        This method is called by the base class when it needs to popup
-        the menu for the default EVT_RIGHT_DOWN event.  Just create
-        the menu how you want it and return it from this function,
-        the base class takes care of the rest.
-        """
         menu = wx.Menu()
         menu.Append(self.TBMENU_RESTORE, "Restore Custom RPC")
         menu.Append(self.TBMENU_CLOSE,   "Close Custom RPC")
@@ -499,9 +486,6 @@ class frameclass(wx.Frame):
 
 
     def onClose(self, evt):
-        """
-        Destroy the taskbar icon and the frame
-        """
         
         # if self.tbicon is not None:
         #     self.tbIcon.RemoveIcon()
@@ -511,9 +495,6 @@ class frameclass(wx.Frame):
         
     #----------------------------------------------------------------------
     def onMinimize(self, event):
-        """
-        When minimizing, hide the frame so it "minimizes to tray"
-        """
         if self.IsIconized():
             self.Hide()
 
