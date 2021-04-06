@@ -5,10 +5,14 @@
 #
 
 import wx
+from wx.adv import TaskBarIcon as TaskBarIcon
 import os
+import sys
+from wx.core import Icon
 import pypresence
 from pypresence import Presence
 import time
+
 ########### JSON
 
 import json
@@ -48,6 +52,83 @@ client_id_App = "827873727396053002"
 RPC = Presence(client_id=client_id_App)
 RPC.connect()
 RPC.update(state="Checkout the Github!", large_image="logo",large_text="Discord Custom RPC", buttons=[{"label": "Github", "url": "https://github.com/Rayrsn/Discord-Custom-RPC"}])
+
+class DemoTaskBarIcon(TaskBarIcon):
+    TBMENU_RESTORE = wx.NewIdRef()
+    TBMENU_CLOSE   = wx.NewIdRef()
+    TBMENU_CHANGE  = wx.NewIdRef()
+    TBMENU_REMOVE  = wx.NewIdRef()
+    
+    def __init__(self, frame):
+        TaskBarIcon.__init__(self, wx.adv.TBI_DOCK) # wx.adv.TBI_CUSTOM_STATUSITEM
+        self.frame = frame
+
+        # Set the image
+        img = wx.Image("icon.ico", wx.BITMAP_TYPE_ANY)
+        bmp = wx.Bitmap(img)
+        self.icon = Icon(bmp)
+        self.icon.CopyFromBitmap(bmp)
+        self.SetIcon(self.icon, "wxPython Demo")
+        self.imgidx = 1
+
+        # bind some events
+        self.Bind(wx.adv.EVT_TASKBAR_LEFT_DCLICK, self.OnTaskBarActivate)
+        self.Bind(wx.EVT_MENU, self.OnTaskBarActivate, id=self.TBMENU_RESTORE)
+        self.Bind(wx.EVT_MENU, self.OnTaskBarClose, id=self.TBMENU_CLOSE)
+        self.Bind(wx.EVT_MENU, self.OnTaskBarChange, id=self.TBMENU_CHANGE)
+        self.Bind(wx.EVT_MENU, self.OnTaskBarRemove, id=self.TBMENU_REMOVE)
+
+
+    def CreatePopupMenu(self):
+        """
+        This method is called by the base class when it needs to popup
+        the menu for the default EVT_RIGHT_DOWN event.  Just create
+        the menu how you want it and return it from this function,
+        the base class takes care of the rest.
+        """
+        menu = wx.Menu()
+        menu.Append(self.TBMENU_RESTORE, "Restore Custom RPC")
+        menu.Append(self.TBMENU_CLOSE,   "Close Custom RPC")
+        return menu
+
+
+    def MakeIcon(self, img):
+        if "wxMSW" in wx.PlatformInfo:
+            img = img.Scale(16, 16)
+        elif "wxGTK" in wx.PlatformInfo:
+            img = img.Scale(22, 22)
+        icon = wx.Icon(img.ConvertToBitmap())
+        return icon
+        
+
+    def OnTaskBarActivate(self, evt):
+        if self.frame.IsIconized():
+            self.frame.Iconize(False)
+        if not self.frame.IsShown():
+            self.frame.Show(True)
+        self.frame.Raise()
+
+
+    def OnTaskBarClose(self, evt):
+        wx.CallAfter(self.frame.Close)
+
+
+    def OnTaskBarChange(self, evt):
+        names = [ "default" ]
+        name = names[self.imgidx]
+
+        eImg = getattr(self.icon, name)
+        self.imgidx += 1
+        if self.imgidx >= len(names):
+            self.imgidx = 0
+
+        icon = self.MakeIcon(eImg.Image)
+        self.SetIcon(icon, "This is a new icon: " + name)
+
+
+    def OnTaskBarRemove(self, evt):
+        self.RemoveIcon()
+
 
 
 class frameclass(wx.Frame):
@@ -254,6 +335,8 @@ class frameclass(wx.Frame):
         self.Bind(wx.EVT_TEXT, self.get_textbox_url_btn1, self.text_ctrl_10)
         self.Bind(wx.EVT_TEXT, self.get_textbox_label_btn2, self.text_ctrl_9)
         self.Bind(wx.EVT_TEXT, self.get_textbox_url_btn2, self.text_ctrl_8)
+        self.Bind(wx.EVT_ICONIZE, self.onMinimize)
+        self.Bind(wx.EVT_CLOSE, self.onClose)
         #self.Bind(wx.EVT_BUTTON, self.Onmsgbox)
         self.text_ctrl_1.ChangeValue(client_id)
         self.text_ctrl_2.ChangeValue(details)
@@ -267,6 +350,7 @@ class frameclass(wx.Frame):
         self.text_ctrl_9.ChangeValue(button_label2)
         self.text_ctrl_8.ChangeValue(button_url2)
 
+        self.tbicon = DemoTaskBarIcon(self)
     ###############################################################################    
 
     def get_textbox_client_id(self, evt):
@@ -412,6 +496,26 @@ class frameclass(wx.Frame):
         RPC.clear()
         RPC.close()
         print('disconnected')
+
+
+    def onClose(self, evt):
+        """
+        Destroy the taskbar icon and the frame
+        """
+        
+        # if self.tbicon is not None:
+        #     self.tbIcon.RemoveIcon()
+        #     self.tbicon.Destroy()
+        self.Destroy()
+        sys.exit()
+        
+    #----------------------------------------------------------------------
+    def onMinimize(self, event):
+        """
+        When minimizing, hide the frame so it "minimizes to tray"
+        """
+        if self.IsIconized():
+            self.Hide()
 
 # end of class frameclass
 class popup(wx.Dialog):
