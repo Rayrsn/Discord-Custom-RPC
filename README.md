@@ -56,3 +56,4 @@ Also remember you can't rename the image once you hit the "Save Changes" button.
 - [x] Make a functioning enable time check box.
 - [x] Minimize to tray feature.
 - [ ] Add presets.
+- [ ] A better UI/UX? (no promises tho)
