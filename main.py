@@ -126,7 +126,7 @@ class frameclass(wx.Frame):
         self.SetSize((470, 620))
         self.SetTitle("Custom RPC")
         _icon = wx.NullIcon
-        _icon.CopyFromBitmap(wx.Bitmap(".\\icon.ico", wx.BITMAP_TYPE_ANY))
+        _icon.CopyFromBitmap(wx.Bitmap("./icon.ico", wx.BITMAP_TYPE_ANY))
         self.SetIcon(_icon)
         self.SetBackgroundColour(wx.Colour(34, 35, 42))
 
@@ -292,16 +292,16 @@ class frameclass(wx.Frame):
         self.button_1.SetMinSize((220, 30))
         self.button_1.SetBackgroundColour(wx.Colour(34, 35, 42))
         self.button_1.SetForegroundColour(wx.Colour(34, 35, 42))
-        self.button_1.SetBitmap(wx.Bitmap(cd + "\\" + "update.bmp", wx.BITMAP_TYPE_ANY), dir=wx.TOP)
-        self.button_1.SetBitmapPressed(wx.Bitmap(cd + "\\" + "update_pressed.bmp", wx.BITMAP_TYPE_ANY))
+        self.button_1.SetBitmap(wx.Bitmap(cd + "/" + "update.bmp", wx.BITMAP_TYPE_ANY), dir=wx.TOP)
+        self.button_1.SetBitmapPressed(wx.Bitmap(cd + "/" + "update_pressed.bmp", wx.BITMAP_TYPE_ANY))
         grid_sizer_1.Add(self.button_1, 0, wx.BOTTOM, 0)
 
         self.button_2 = wx.Button(self.panel_1, wx.ID_ANY, "", style=wx.BORDER_NONE)
         self.button_2.SetMinSize((220, 30))
         self.button_2.SetBackgroundColour(wx.Colour(34, 35, 42))
         self.button_2.SetForegroundColour(wx.Colour(34, 35, 42))
-        self.button_2.SetBitmap(wx.Bitmap(cd + "\\" + "disconnect.bmp", wx.BITMAP_TYPE_ANY), dir=wx.TOP)
-        self.button_2.SetBitmapPressed(wx.Bitmap(cd + "\\" + "disconnect_pressed.bmp", wx.BITMAP_TYPE_ANY))
+        self.button_2.SetBitmap(wx.Bitmap(cd + "/" + "disconnect.bmp", wx.BITMAP_TYPE_ANY), dir=wx.TOP)
+        self.button_2.SetBitmapPressed(wx.Bitmap(cd + "/" + "disconnect_pressed.bmp", wx.BITMAP_TYPE_ANY))
         grid_sizer_1.Add(self.button_2, 0, wx.BOTTOM, 0)
 
         self.panel_1.SetSizer(grid_sizer_1)
