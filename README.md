@@ -34,7 +34,7 @@
 
 4. Here you can upload any image you want. (it has to be 512x512, there are many online tools that resize images for you)
 Also remember you can't rename the image once you hit the "Save Changes" button. (it has to be deleted and reuploaded)
-5. Then head back to "General Information" tab and copy the Application ID. (this is the same as Client ID)
+5. Then head back to the "General Information" tab and copy the Application ID. (this is the same as Client ID)
 
 ![AppID](https://github.com/Rayrsn/Discord-Custom-RPC/raw/main/images/appid.png?raw=true)
 
@@ -56,9 +56,11 @@ Also remember you can't rename the image once you hit the "Save Changes" button.
 
 All of the mentioned bugs are fixed.
 
-## Acknowledgments
-* The reason I haven't uploaded a Linux executable is because there are too many Linux distros and each one of them have a specific requirement.
-* And the file size for each Linux executable is much larger than the Windows version.
+## Acknowledgments and FAQ
+* The reason I haven't uploaded a Linux executable is that there are too many Linux distros and each one of them has a specific requirement. And the file size for each Linux executable is much larger than the Windows version.
+
+* Why doesn't it work with wine on Linux?
+Because wine runs the executable from a different path rather than the path wine was launched from and the executable can't launch if the image and config files aren't there.
 
 ## To-Do List
 - [x] Make a functioning enable time check box.
