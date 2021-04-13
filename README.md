@@ -43,6 +43,7 @@ Also remember you can't rename the image once you hit the "Save Changes" button.
 2. Run `python pip install -r requirements.txt` or `python3 -m pip install --requirement requirements.txt` if you're on Linux or Mac.
 3. Then run `python main.py` or `python3 main.py` if you're on Linux or Mac.
 ## Building from source
+* This also works with Linux (i haven't tested it with Mac yet) which means you can also make Linux executables
 1. Follow steps 1 and 2 from the previous section.
 2. Install PyInstaller by running `python pip install pyinstaller` or `python3 -m pip install pyinstaller` if you're on Linux or Mac.
 3. Run `python pyinstaller --noconsole --onefile --icon=icon.ico main.py` or `python3 pyinstaller --noconsole --onefile --icon=icon.ico main.py` if you're on Linux or Mac. (Replace <b> icon.ico </b> with your own icon)
@@ -54,6 +55,11 @@ Also remember you can't rename the image once you hit the "Save Changes" button.
 * ~~The enable time check box doesn't work.~~
 
 All of the mentioned bugs are fixed.
+
+## Acknowledgments
+* The reason I haven't uploaded a Linux executable is because there are too many Linux distros and each one of them have a specific requirement.
+* And the file size for each Linux executable is much larger than the Windows version.
+
 ## To-Do List
 - [x] Make a functioning enable time check box.
 - [x] Minimize to tray feature.
