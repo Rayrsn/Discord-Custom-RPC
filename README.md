@@ -20,7 +20,7 @@
 </p>
 
 # Usage
-### <b> Just head to the [Releases](https://github.com/Rayrsn/Discord-Custom-RPC/releases) tab and download the latest version. (Only works with Windows) </b>
+### <b> Just head to the [Releases](https://github.com/Rayrsn/Discord-Custom-RPC/releases) tab and download the latest version. <ins>(Only works with Windows)</ins> </b>
 ### <b>For running on Linux and Mac go to [Running from source](https://github.com/Rayrsn/Discord-Custom-RPC#running-from-source)</b>
 ## How do i get the client id and the other stuff?
 1. Go to [Discord's Developer Portal](https://discord.com/developers/applications/).
