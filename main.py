@@ -39,12 +39,16 @@ cd = dir_path = os.path.dirname(os.path.realpath(__file__))
 # begin wxGlade: extracode
 # end wxGlade
 
-#########################
+################################################################################
+# PLEASE DON'T REMOVE THESE. IF YOU DO, PLEASE GIVE CREDIT WHEN ASKED ABOUT THE PROGRAM, THANK YOU!!
+
 
 client_id_App = "827873727396053002"
 RPC = Presence(client_id=client_id_App)
 RPC.connect()
 RPC.update(state="Checkout the Github!", large_image="logo",large_text="Discord Custom RPC", buttons=[{"label": "Github", "url": "https://github.com/Rayrsn/Discord-Custom-RPC"}])
+
+################################################################################
 
 class DemoTaskBarIcon(TaskBarIcon):
     TBMENU_RESTORE = wx.NewIdRef()
