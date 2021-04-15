@@ -60,7 +60,7 @@ All of the mentioned bugs are fixed.
 * The reason I haven't uploaded a Linux executable is that there are too many Linux distros and each one of them has a specific requirement. And the file size for each Linux executable is much larger than the Windows version.
 
 * Why doesn't it work with wine on Linux?
-Because wine runs the executable from a different path rather than the path wine was launched from and the executable can't launch if the image and config files aren't there.
+Because if it's launched by wine, the program won't detect the running discord session. this is neither a bug nor a mistake, it's simply a software limitaion.
 
 ## To-Do List
 - [x] Make a functioning enable time check box.
