@@ -1,8 +1,8 @@
 # Discord-Custom-RPC
 
 <p align="center">
-	<img src="https://img.shields.io/github/v/release/Rayrsn/Discord-Custom-RPC?style=for-the-badge" />
-	<img src="https://img.shields.io/badge/using-pypresence-00bb88.svg?style=for-the-badge&logo=discord&logoWidth=20" />
+	<img src="https://img.shields.io/github/v/release/Rayrsn/Discord-Custom-RPC?style=for-the-badge&logoWidth=20&color=8829d6" />
+	<img src="https://img.shields.io/badge/using-pypresence-00bb88.svg?style=for-the-badge&logo=discord&logoWidth=20&color=8829d6" />
 </p>
 
 <p align="center">
