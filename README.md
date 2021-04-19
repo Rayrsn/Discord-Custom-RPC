@@ -57,6 +57,9 @@ Also remember you can't rename the image once you hit the "Save Changes" button.
 All of the mentioned bugs are fixed.
 
 ## Acknowledgments and FAQ
+* Why can't I click on my own button? 
+You just can't. (Discord Limitation)
+
 * The reason I haven't uploaded a Linux executable is that there are too many Linux distros and each one of them has a specific requirement. And the file size for each Linux executable is much larger than the Windows version.
 
 * Why doesn't it work with wine on Linux?
