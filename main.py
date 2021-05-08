@@ -498,7 +498,6 @@ class frameclass(wx.Frame):
 
     def dcfunc(self, evt):
         RPC.clear()
-        RPC.close()
         print('disconnected')
 
 
