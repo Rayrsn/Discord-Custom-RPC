@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <img width="512" height="512" src="https://github.com/Rayrsn/Discord-Custom-RPC/raw/main/images/blurplerpclogocircle.png?raw=true">
+  <img width="512" height="512" src="https://github.com/Rayrsn/Discord-Custom-RPC/raw/main/images/rpclogo.png?raw=true">
 </p>
 
 ### <h2 align="center"> <i> <b> A Discord Custom RPC app with GUI </b> </i> </h2>
