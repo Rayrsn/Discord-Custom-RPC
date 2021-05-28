@@ -1,11 +1,5 @@
 # Discord-Custom-RPC
 
-<h1 align="center"> 
- 
-		HAPPY 6th BIRTHDAY DISCORD 🎉🎉 
-
-</h1>
-
 <p align="center">
 	<img src="https://img.shields.io/github/v/release/Rayrsn/Discord-Custom-RPC?style=for-the-badge&logoWidth=20&color=8829d6" />
 	<img src="https://img.shields.io/badge/using-pypresence-00bb88.svg?style=for-the-badge&logo=discord&logoWidth=20&color=8829d6" />
@@ -81,3 +75,6 @@ Because if it's launched by wine, the program won't detect the running discord s
 - [x] Minimize to tray feature.
 - [ ] Add presets.
 - [ ] A better UI/UX? (no promises tho)
+
+## Questions
+### If yall have any questions or just wanna talk, add me on [Discord](https://rayr.ml/LinkInBio) or use my username Rayr#6709 (this might change so it's better to just use the link)
