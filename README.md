@@ -45,7 +45,7 @@ Also remember you can't rename the image once you hit the "Save Changes" button.
 
 ## Running from source 
 1. Make sure you have Python 3 installed.
-2. Run `python pip install -r requirements.txt` or `python3 -m pip install --requirement requirements.txt` if you're on Linux or Mac.
+2. Run `python -m pip install -r requirements.txt` or `python3 -m pip install --requirement requirements.txt` if you're on Linux or Mac.
 3. Then run `python main.py` or `python3 main.py` if you're on Linux or Mac.
 ## Building from source
 * This also works with Linux (i haven't tested it with Mac yet) which means you can also make Linux executables
