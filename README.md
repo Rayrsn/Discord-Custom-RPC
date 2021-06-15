@@ -15,7 +15,7 @@
 
 <br>
 
-<p>
+<p align="center">
   <img width=70% height=70% src="https://github.com/Rayrsn/Discord-Custom-RPC/raw/main/images/preview_win.png?raw=true">
 </p>
 
