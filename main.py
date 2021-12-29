@@ -43,6 +43,8 @@ button_label1=config['Main']['button_label1']
 button_url1=config['Main']['button_url1']
 button_label2=config['Main']['button_label2']
 button_url2=config['Main']['button_url2']
+enable_time=config['Main']['enable_time']
+
 
 #####################
 cd = dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -353,6 +355,10 @@ class frameclass(wx.Frame):
         self.text_ctrl_10.ChangeValue(button_url1)
         self.text_ctrl_9.ChangeValue(button_label2)
         self.text_ctrl_8.ChangeValue(button_url2)
+        if enable_time == "true":
+            self.checkbox_2.SetValue(True)
+        elif enable_time == "false":
+            self.checkbox_2.SetValue(False)
 
         self.tbicon = MainTaskBarIcon(self)
     ###############################################################################    
@@ -399,7 +405,9 @@ class frameclass(wx.Frame):
     def get_textbox_url_btn2(self, evt):
         global button_url2
         button_url2 = (str(self.text_ctrl_8.GetValue()))
-    
+    def get_textbox_url_btn2(self, evt):
+        global enable_time_checkbox
+        enable_time_checkbox = (str(self.checkbox_2.GetValue()))
     
     
     def updatefunc(self, evt):
@@ -417,6 +425,7 @@ class frameclass(wx.Frame):
         button_url1 = (str(self.text_ctrl_10.GetValue()))
         button_label2 = (str(self.text_ctrl_9.GetValue()))
         button_url2 = (str(self.text_ctrl_8.GetValue()))
+        enable_time_checkbox = (str(self.checkbox_2.GetValue()))
         client_id = client_id_ent
 
         print(client_id)
@@ -486,10 +495,12 @@ class frameclass(wx.Frame):
             config['Main']['button_url1']=button_url1
             config['Main']['button_label2']=button_label2
             config['Main']['button_url2']=button_url2
+            config['Main']['enable_time']=enable_time_checkbox
+
             with open("config.json","w") as new_config:
                 json.dump(config,new_config)
             RPC.clear()
-            print('rpc closed')
+            print('rpc cleared')
             RPC.update(**kwargs)
         except pypresence.exceptions.InvalidID:
             wx.MessageBox("Invalid Client ID", "Warning" ,wx.OK | wx.ICON_INFORMATION)
