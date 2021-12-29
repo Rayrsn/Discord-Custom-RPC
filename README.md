@@ -47,6 +47,7 @@ Also remember you can't rename the image once you hit the "Save Changes" button.
 1. Make sure you have Python 3 installed.
 2. Run `python -m pip install -r requirements.txt` or `python3 -m pip install --requirement requirements.txt` if you're on Linux or Mac.
 3. Then run `python main.py` or `python3 main.py` if you're on Linux or Mac.
+* If you have layout issues (e.g buttons are cut in half and/or text is not visible etc.) try running `python main-lin.py` or `python3 main-lin.py` if you're on Linux or Mac.
 ## Building from source
 * This also works with Linux (i haven't tested it with Mac yet) which means you can also make Linux executables
 1. Follow steps 1 and 2 from the previous section.
