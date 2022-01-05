@@ -66,10 +66,10 @@ RPC.update(state="Checkout the Github!", large_image="logo",large_text="Discord 
 ################################################################################
 
 class MainTaskBarIcon(TaskBarIcon):
-    TBMENU_RESTORE = wx.NewIdRef()
-    TBMENU_CLOSE   = wx.NewIdRef()
-    TBMENU_CHANGE  = wx.NewIdRef()
-    TBMENU_REMOVE  = wx.NewIdRef()
+    TBMENU_RESTORE = wx.NewId()
+    TBMENU_CLOSE   = wx.NewId()
+    TBMENU_CHANGE  = wx.NewId()
+    TBMENU_REMOVE  = wx.NewId()
     
     def __init__(self, frame):
         TaskBarIcon.__init__(self, wx.adv.TBI_DOCK) 
