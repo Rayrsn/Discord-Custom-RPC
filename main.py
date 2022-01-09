@@ -355,9 +355,9 @@ class frameclass(wx.Frame):
         self.text_ctrl_10.ChangeValue(button_url1)
         self.text_ctrl_9.ChangeValue(button_label2)
         self.text_ctrl_8.ChangeValue(button_url2)
-        if enable_time == "true":
+        if enable_time == "True":
             self.checkbox_2.SetValue(True)
-        elif enable_time == "false":
+        elif enable_time == "False":
             self.checkbox_2.SetValue(False)
 
         self.tbicon = MainTaskBarIcon(self)
